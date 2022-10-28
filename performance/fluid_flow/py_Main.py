@@ -1,4 +1,12 @@
 #!/usr/bin/env python
+# Al Danial, October 2022
+
+# https://github.com/AlDanial/matlab_with_python/
+# Python translation by Al Danial of MATLAB code by
+# Jamie Johns.  The original MATLAB code is at
+# https://github.com/JamieMJohns/Navier-stokes-2D-numerical-solve-incompressible-flow-with-custom-scenarios-MATLAB-
+# The Python version is covered by the MIT license.
+
 import numpy as np
 import time
 
@@ -15,7 +23,6 @@ from navier_stokes_functions import (
     solve_flow,
     VELOCITY_OUT_DIR,
 )
-
 
 def from_imagegrab():  # {{{
     F = "imagegrab_results.mat-50x200"
@@ -54,7 +61,6 @@ def saveall(BC, CA, CP, CV, CVC, OF, OF2, P0, U, uc, V, vc, velxi, velyi):  # {{
 
 # }}}
 
-
 def main():
     # Parameters for scenario (Modify these)
     # set information about domain of simulation
@@ -67,23 +73,13 @@ def main():
     xinc = 400  # number of nodes across x-component of domain (number of nodes from x=0 to x=domainX); where dx=domainX/xinc (=dy=dn)
 
     # Note xinc needed by matlab for imagegrab(), but not used here
-
-    dt = 0.0015  # set set delta time [unit: seconds]
-    dt = 0.0050  # set set delta time [unit: seconds]
-    dt = 0.0025  # set set delta time [unit: seconds]
     dt = 0.0030  # set set delta time [unit: seconds]
 
-    MI = (
-        12900  # number of time steps to perform calculations [time(at time step)=MI*dt]
+    MI = 12900  # number of time steps to perform calculations [time(at time step)=MI*dt]
     )
-    # MI = 100     # number of time steps to perform calculations [time(at time step)=MI*dt]
-    ##MI = 1250
-    ##print(f"WARNING shortening number of iterations to {MI}")
     velyi = 0  # y-component velocity of region with constant velocity (regions coloured red in scenario image)  [unit: meters/second]
     # [velyi>0,velocity has vector -y with mag abs(velyi) and velyi<0, vel has vector +y with mag of abs(velyi)]
-
-    velxi = 1  # x-component velocity of region with constant velocity (regions coloured red in SCENARIO)   [unit: meters/second]
-    velxi = 0.45
+    velxi = 0.45  # x-component velocity of region with constant velocity (regions coloured red in SCENARIO)   [unit: meters/second]
     # [velxi>0,velocity has vector +x with mag abs(velxi) and velxi<0, vel has vector -x with mag of abs(velxi)]
     dens = 1  # density  [unit: kg/m^3] , water(pure)=1000 blood=1025 air~1
     mu = 1 / 1000  # dynamic viscosity [kg/(m*s)]
@@ -125,7 +121,6 @@ def main():
         MINIT,
         MAXIT,
     )
-
 
 if __name__ == "__main__":
     main()

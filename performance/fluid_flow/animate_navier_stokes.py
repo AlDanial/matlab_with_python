@@ -1,4 +1,10 @@
 #!/usr/bin/env python
+# Al Danial, October 2022
+# https://github.com/AlDanial/matlab_with_Python/
+# This code is covered by the MIT open source license.
+
+# Create animation or individual PNG images of fluid flow previously
+# computed with py_Main.py or Main.m.
 
 import sys
 import os.path
@@ -9,7 +15,6 @@ from scipy.io import loadmat
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from navier_stokes_functions import VELOCITY_OUT_DIR, PREFIX
-
 
 def parse_args():  # {{{
     parser = argparse.ArgumentParser(
@@ -180,7 +185,6 @@ def parse_args():  # {{{
 
     return args, ext, title
 
-
 # }}}
 def combine_mat_frames(x_mats, y_mats, incr=1):  # {{{
     vel_list = []
@@ -202,7 +206,6 @@ def combine_mat_frames(x_mats, y_mats, incr=1):  # {{{
         all_vel[:, :, i : i + nFr] = vel
         i += nFr
     return all_vel
-
 
 # }}}
 def combine_npy_frames(x_mats, y_mats, incr=1):  # {{{
@@ -232,12 +235,11 @@ def combine_npy_frames(x_mats, y_mats, incr=1):  # {{{
         i += nFr
     return all_vel
 
-
 # }}}
-def animate_flow(
+def animate_flow(  # {{{
     vel,
     title,
-    frame_time=None,  # {{{
+    frame_time=None,
     caption=None,
     start_frame=0,
     incr=1,
@@ -290,7 +292,6 @@ def animate_flow(
             fig.savefig(
                 png_file,
                 dpi=250,
-                #                       size = ( 1242 , 266 ),
                 bbox_inches="tight",
                 pad_inches=0.1,
             )
@@ -353,7 +354,6 @@ def main():  # {{{
         png_dir=args.png_dir,
         start_offset=args.start_offset,
     )
-
 
 # }}}
 

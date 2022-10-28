@@ -1,4 +1,12 @@
 #!/usr/bin/env python
+# Al Danial, October 2022
+
+# https://github.com/AlDanial/matlab_with_python/
+# Python translation by Al Danial of MATLAB code by
+# Jamie Johns.  The original MATLAB code is at
+# https://github.com/JamieMJohns/Navier-stokes-2D-numerical-solve-incompressible-flow-with-custom-scenarios-MATLAB-
+# The Python version is covered by the MIT license.
+
 import time
 import numpy as np
 import pathlib

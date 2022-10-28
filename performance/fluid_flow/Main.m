@@ -1,6 +1,8 @@
-% Al Danial 2022
+% Al Danial, October 2022
+% https://github.com/AlDanial/matlab_with_Python/
 % Adapted from code by Jamie Johns 2016
 % https://github.com/JamieMJohns/Navier-stokes-2D-numerical-solve-incompressible-flow-with-custom-scenarios-MATLAB-
+
 close all %close any open figures
 clear %clear all variables in workspace
 
