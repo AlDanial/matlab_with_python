@@ -76,7 +76,6 @@ def main():
     dt = 0.0030  # set set delta time [unit: seconds]
 
     MI = 12900  # number of time steps to perform calculations [time(at time step)=MI*dt]
-    )
     velyi = 0  # y-component velocity of region with constant velocity (regions coloured red in scenario image)  [unit: meters/second]
     # [velyi>0,velocity has vector -y with mag abs(velyi) and velyi<0, vel has vector +y with mag of abs(velyi)]
     velxi = 0.45  # x-component velocity of region with constant velocity (regions coloured red in SCENARIO)   [unit: meters/second]

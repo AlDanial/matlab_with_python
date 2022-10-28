@@ -576,7 +576,7 @@ def solve_flow(  # {{{
     # matrix of size a x b x c  =  a*b*c*8 bytes = a*b*c*8/(C^3) gigabytes  C=2^10
     # FILES THAT WILL BE SAVE velx and vely so if mesh  =  200 x 200 and MI=1000
     # total saved on hardrive space  =  8*2*200*200*MI/(C^3)
-    spaceused = 1.0889 * (
+    spaceused = 2*1.0889 * (
         8 * XI * YI * MI / (10**9)
     )  # determine approximate space used
     print(f"Approximately {spaceused:.4f} GB of files will be written")
