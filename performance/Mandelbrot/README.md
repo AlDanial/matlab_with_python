@@ -1,5 +1,11 @@
 # Mandelbrot set
 
+MATLAB, Python, and MATLAB calling Python implementations of
+code that computes terms of the Mandelbrot set.
+This example comes from Chapter 14 of
+[Python for MATLAB Development](https://github.com/Apress/python-for-matlab-development), Apress, 2022.
+See also [my article explaining aspects of this example](https://al.danial.org/posts/accelerate_matlab_with_python_and_numba/#example-1-mandelbrot-set).
+
 ### ``MB_main.m``
 The plain MATLAB implementation.
 
